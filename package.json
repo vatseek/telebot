@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "echo": "node index.js"
+    "echo": "node index.js",
+    "test": "PORT=5000 NODE_PATH=./app TOKEN=289831525:AAHOgpMzp2FU6nsQRcnmbgEZXoX1IOdpUrU node server.js"
   },
   "author": "",
   "license": "ISC",
