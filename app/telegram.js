@@ -1,7 +1,7 @@
 const _ = require('underscore');
 const TeleBot = require('telebot');
 const Amount = require('./models/ballance');
-const config = require('nconf');
+const config = require('./config');
 
 Number.prototype.format = function(length) {
     const l = this.toString().length + 2;
@@ -23,7 +23,7 @@ const formatTable = function(data, total) {
     return result;
 };
 
-const bot = new TeleBot(config.get('telegram.token'));
+const bot = new TeleBot(config.get('telegram:token'));
 const send = (to, message) => {
     return bot.sendMessage(
         to,
