@@ -23,7 +23,7 @@ const formatTable = function(data, total) {
     return result;
 };
 
-const bot = new TeleBot(process.env.TOKEN || config.get('telegram.token'));
+const bot = new TeleBot(config.get('telegram.token'));
 const send = (to, message) => {
     return bot.sendMessage(
         to,
